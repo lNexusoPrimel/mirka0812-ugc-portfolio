@@ -343,30 +343,3 @@ cursor.style.transform="translate(-50%,-50%) scale(1)";
 
 
 });
-
-// HERO GSAP ANIMATION
-
-
-gsap.from(".hero-content",{
-
-opacity:0,
-
-y:80,
-
-duration:1.5,
-
-ease:"power3.out"
-
-});
-
-
-
-gsap.from(".navbar",{
-
-opacity:0,
-
-y:-50,
-
-duration:1
-
-});
