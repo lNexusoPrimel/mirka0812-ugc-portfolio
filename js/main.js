@@ -290,3 +290,56 @@ answer.style.display="block";
 
 });
 
+// CUSTOM CURSOR
+
+
+const cursor=document.querySelector(".cursor");
+
+const dot=document.querySelector(".cursor-dot");
+
+
+document.addEventListener("mousemove",(e)=>{
+
+
+cursor.style.left=e.clientX+"px";
+
+cursor.style.top=e.clientY+"px";
+
+
+dot.style.left=e.clientX+"px";
+
+dot.style.top=e.clientY+"px";
+
+
+});
+
+
+
+
+
+const hoverElements=document.querySelectorAll("a,button,.video-card");
+
+
+hoverElements.forEach(element=>{
+
+
+element.addEventListener("mouseenter",()=>{
+
+
+cursor.style.transform="translate(-50%,-50%) scale(1.8)";
+
+
+});
+
+
+
+element.addEventListener("mouseleave",()=>{
+
+
+cursor.style.transform="translate(-50%,-50%) scale(1)";
+
+
+});
+
+
+});
