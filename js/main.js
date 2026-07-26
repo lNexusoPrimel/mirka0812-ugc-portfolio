@@ -225,6 +225,15 @@ const videos=document.querySelectorAll(".video-card video");
 videos.forEach(video=>{
 
 
+// force a visible first-frame thumbnail (mobile browsers need this)
+
+video.play().then(()=>{
+
+video.pause();
+
+}).catch(()=>{});
+
+
 video.parentElement.addEventListener("mouseenter",()=>{
 
 video.play();
