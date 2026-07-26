@@ -13,6 +13,94 @@ loader.classList.add("hidden");
 });
 
 
+// CONTACT FORM
+
+
+const contactForm=document.querySelector("#contact-form");
+
+
+if(contactForm){
+
+
+contactForm.addEventListener("submit",(e)=>{
+
+
+e.preventDefault();
+
+
+const submitBtn=contactForm.querySelector("button");
+
+const originalText=submitBtn.innerHTML;
+
+submitBtn.innerHTML="Sending...";
+
+submitBtn.disabled=true;
+
+
+fetch(contactForm.action,{
+
+method:"POST",
+
+body:new FormData(contactForm),
+
+headers:{
+
+"Accept":"application/json"
+
+}
+
+})
+
+.then(response=>{
+
+
+if(response.ok){
+
+
+contactForm.reset();
+
+
+contactForm.classList.add("submitted");
+
+
+}
+
+else{
+
+
+alert("Something went wrong. Please try again or email me directly.");
+
+
+}
+
+
+})
+
+.catch(()=>{
+
+
+alert("Something went wrong. Please try again or email me directly.");
+
+
+})
+
+.finally(()=>{
+
+
+submitBtn.innerHTML=originalText;
+
+submitBtn.disabled=false;
+
+
+});
+
+
+});
+
+
+}
+
+
 const navbar = document.querySelector(".navbar");
 
 
@@ -358,3 +446,5 @@ cursor.style.transform="translate(-50%,-50%) scale(1)";
 
 
 });
+
+
