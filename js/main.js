@@ -13,6 +13,51 @@ loader.classList.add("hidden");
 });
 
 
+// MOBILE MENU
+
+
+const menuBtn=document.querySelector(".menu-btn");
+
+const mobileNav=document.querySelector("nav");
+
+
+if(menuBtn && mobileNav){
+
+
+menuBtn.addEventListener("click",()=>{
+
+
+mobileNav.classList.toggle("open");
+
+
+menuBtn.classList.toggle("open");
+
+
+});
+
+
+
+mobileNav.querySelectorAll("a").forEach(link=>{
+
+
+link.addEventListener("click",()=>{
+
+
+mobileNav.classList.remove("open");
+
+
+menuBtn.classList.remove("open");
+
+
+});
+
+
+});
+
+
+}
+
+
 // CONTACT FORM
 
 
