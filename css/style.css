@@ -1372,6 +1372,32 @@ gap:20px;
 }
 
 
+.form-success{
+
+display:none;
+
+background:#e8f0e5;
+
+color:#3d5c3a;
+
+padding:16px 20px;
+
+border-radius:15px;
+
+font-size:15px;
+
+text-align:center;
+
+}
+
+
+form.submitted .form-success{
+
+display:block;
+
+}
+
+
 
 input,
 textarea{
