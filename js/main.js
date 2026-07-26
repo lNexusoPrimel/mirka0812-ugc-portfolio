@@ -1,3 +1,18 @@
+// LOADER
+
+window.addEventListener("load",()=>{
+
+const loader=document.querySelector(".loader");
+
+setTimeout(()=>{
+
+loader.classList.add("hidden");
+
+},400);
+
+});
+
+
 const navbar = document.querySelector(".navbar");
 
 
@@ -343,3 +358,5 @@ cursor.style.transform="translate(-50%,-50%) scale(1)";
 
 
 });
+
+
