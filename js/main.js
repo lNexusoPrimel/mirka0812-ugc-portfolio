@@ -8,7 +8,7 @@ setTimeout(()=>{
 
 loader.classList.add("hidden");
 
-},400);
+},2200);
 
 });
 
@@ -358,5 +358,3 @@ cursor.style.transform="translate(-50%,-50%) scale(1)";
 
 
 });
-
-
