@@ -112,3 +112,148 @@ counter.innerHTML=count;
 
 
 });
+
+// VIDEO HOVER PLAY
+
+
+const videos=document.querySelectorAll(".video-card video");
+
+
+videos.forEach(video=>{
+
+
+video.parentElement.addEventListener("mouseenter",()=>{
+
+video.play();
+
+});
+
+
+
+video.parentElement.addEventListener("mouseleave",()=>{
+
+video.pause();
+
+video.currentTime=0;
+
+});
+
+
+});
+
+
+
+
+
+
+
+// FILTERS
+
+
+const filters=document.querySelectorAll(".filter");
+
+const cards=document.querySelectorAll(".video-card");
+
+
+filters.forEach(button=>{
+
+
+button.addEventListener("click",()=>{
+
+
+filters.forEach(btn=>btn.classList.remove("active"));
+
+
+button.classList.add("active");
+
+
+
+let category=button.dataset.category;
+
+
+
+cards.forEach(card=>{
+
+
+if(category=="all" ||
+card.dataset.category==category){
+
+
+card.style.display="block";
+
+
+}
+
+else{
+
+
+card.style.display="none";
+
+
+}
+
+
+});
+
+
+
+});
+
+
+});
+
+
+
+
+
+
+
+// MODAL VIDEO
+
+
+const modal=document.querySelector(".video-modal");
+
+const modalVideo=modal.querySelector("video");
+
+const close=document.querySelector(".close");
+
+
+
+cards.forEach(card=>{
+
+
+card.addEventListener("click",()=>{
+
+
+let video=card.querySelector("video");
+
+
+modal.style.display="flex";
+
+
+modalVideo.src=video.querySelector("source").src;
+
+
+modalVideo.play();
+
+
+
+});
+
+
+});
+
+
+
+close.onclick=()=>{
+
+
+modal.style.display="none";
+
+
+modalVideo.pause();
+
+
+};
+
+
