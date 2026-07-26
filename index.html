@@ -945,32 +945,43 @@ Let's create videos that make your brand stand out.
 
 
 
-<form>
+<form action="https://formspree.io/anamirkaseverinomartinez@gmail.com" method="POST" id="contact-form">
 
 
 <input 
 type="text"
-placeholder="Your Name">
+name="name"
+placeholder="Your Name"
+required>
 
 
 <input 
 type="email"
-placeholder="Email">
+name="email"
+placeholder="Email"
+required>
 
 
 <input 
 type="text"
+name="brand"
 placeholder="Brand">
 
 
 <textarea
-placeholder="Tell me about your project">
+name="message"
+placeholder="Tell me about your project"
+required>
 </textarea>
 
 
-<button>
+<button type="submit">
 Send Message
 </button>
+
+<p class="form-success">
+Thanks! Your message has been sent — I'll get back to you soon.
+</p>
 
 
 </form>
