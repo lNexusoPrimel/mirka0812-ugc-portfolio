@@ -624,9 +624,11 @@ margin:12px 0;
 
 display:flex;
 
-gap:20px;
+justify-content:center;
 
-margin-top:15px;
+gap:26px;
+
+margin-top:20px;
 
 }
 
@@ -639,9 +641,9 @@ align-items:center;
 
 justify-content:center;
 
-width:46px;
+width:64px;
 
-height:46px;
+height:64px;
 
 border-radius:50%;
 
@@ -665,9 +667,9 @@ color:white;
 
 .mobile-socials svg{
 
-width:20px;
+width:30px;
 
-height:20px;
+height:30px;
 
 }
 
