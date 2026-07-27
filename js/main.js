@@ -13,6 +13,39 @@ loader.classList.add("hidden");
 });
 
 
+// THEME TOGGLE
+
+
+const themeToggle=document.querySelector(".theme-toggle");
+
+
+if(themeToggle){
+
+
+themeToggle.addEventListener("click",()=>{
+
+
+document.documentElement.classList.toggle("dark-mode");
+
+
+const isDark=document.documentElement.classList.contains("dark-mode");
+
+
+try{
+
+
+localStorage.setItem("theme",isDark?"dark":"light");
+
+
+}catch(e){}
+
+
+});
+
+
+}
+
+
 // MOBILE MENU
 
 
