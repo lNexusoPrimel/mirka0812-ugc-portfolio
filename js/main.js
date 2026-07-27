@@ -1,14 +1,18 @@
 // LOADER
 
-window.addEventListener("load",()=>{
+document.addEventListener("DOMContentLoaded",()=>{
 
 const loader=document.querySelector(".loader");
+
+if(loader){
 
 setTimeout(()=>{
 
 loader.classList.add("hidden");
 
 },2200);
+
+}
 
 });
 
