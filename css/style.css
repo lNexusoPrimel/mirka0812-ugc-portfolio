@@ -453,6 +453,8 @@ display:none;
 border:none;
 background:none;
 
+color:var(--text-main);
+
 font-size:25px;
 
 }
@@ -1603,6 +1605,8 @@ padding:20px;
 border:none;
 
 background:var(--filter-bg);
+
+color:var(--text-main);
 
 margin-top:15px;
 
